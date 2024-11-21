@@ -24,8 +24,13 @@
                     <a href="#" class="text-indigo-600 hover:underline">Forget password?</a>
                 </div>
             </div>
-
+        
             <x-button class="w-full bg-green-50">Login</x-button>
+            @if (session('error'))
+            <p class="text-red-500 font-semibold text-sm font-main">
+                {{ session('error') }}
+            </p>
+            @endif
         </form>
     </x-card>
 </x-layout>

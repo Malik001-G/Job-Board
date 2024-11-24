@@ -10,7 +10,6 @@
             You already applied to this job
         </div>
         @endcan
-
     </x-job-card>
 
     <x-card class="mb-4">

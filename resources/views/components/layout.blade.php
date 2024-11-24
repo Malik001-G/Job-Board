@@ -15,11 +15,12 @@
                 <a href="{{ route('jobs.index') }}">Home</a>
             </li>
         </ul>
-        <ul class="flex space-x-2">
+        <ul class="flex space-x-5">
             @auth
             <li>
-                <a href="{{route('my-job-applications.index')}}">
+                <a href="{{ route('my-job-applications.index') }}">
                     {{ auth()->user()->name ?? 'Guest' }} : Applications
+                    ({{ auth()->check() ? auth()->user()->jobApplications()->count() : 0 }})
                 </a>
             </li>
             <li>
